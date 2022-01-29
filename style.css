@@ -35,11 +35,12 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .realisation, .skills, .framework, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
+.realisation .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -258,19 +259,20 @@ section .title::after{
 }
 
 /* services section styling */
-.services, .teams{
+.services, .framework{
     color:#fff;
     background: #111;
 }
 .services .title::before,
-.teams .title::before{
+.framework .title::before{
     background: #fff;
 }
 .services .title::after,
-.teams .title::after{
+.framework .title::after{
     background: #111;
-    content: "mes projets";
+    content: "ce que je propose";
 }
+
 .services .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
@@ -378,11 +380,11 @@ section .title::after{
     width: 70%;
 }
 
-/* teams section styling */
-.teams .title::after{
+/* frameworks section styling */
+.framework .title::after{
     content: "déja utilisés";
 }
-.teams .carousel .card{
+.framework .carousel .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -390,25 +392,25 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.framework .carousel .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.framework .carousel .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.framework .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.framework .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.framework .carousel .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -416,7 +418,7 @@ section .title::after{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.framework .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -439,6 +441,51 @@ section .title::after{
 .owl-dot.active,
 .owl-dot:hover{
     background: crimson!important;
+}
+
+.realisation, .framework{
+    color:#fff;
+    background: #111;
+}
+.realisation .title::before,
+.framework .title::before{
+    background: #fff;
+}
+.realisation .title::after{
+    background: #111;
+    content: "mes projets";
+}
+
+.realisation .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.realisation .serv-content .card:hover{
+    background: crimson;
+}
+.realisation .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.realisation .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.realisation .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.realisation .serv-content .card:hover i{
+    color: #fff;
+}
+.realisation .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
 }
 
 /* contact section styling */
@@ -644,6 +691,9 @@ footer span a:hover{
         font-size: 20px;
     }
     .services .serv-content .card{
+        width: 100%;
+    }
+    .realisation .serv-content .card{
         width: 100%;
     }
 }
